@@ -1,0 +1,232 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    font-size: 2rem;
+    padding: 20px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+
+}
+
+.layout {
+
+    background-color: #597973;
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    gap: 0px;
+    grid:
+        "header" 1fr 
+        "main" 10fr 
+        "footer" 1fr /100%;
+
+
+}
+
+
+.main {
+    grid-area: main;
+    background-color: #0079c8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 300px;
+    margin-top: 100px;
+}
+
+.centered-button {
+    padding: 10px 20px;
+    background-color: #bfe2df;
+    border: solid black 1px;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.centered-button:hover {
+    background-color: #005c91;
+    color: #fff;
+    font-weight: 500;
+}
+
+.centered-button.clicked {
+    animation: clickAnimation 0.1s ease-out;
+
+}
+
+@keyframes clickAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    cursor: pointer;
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding-left: 2vw;
+    margin: 5%;
+
+}
+
+.grid-container article {
+    background-color: #0079c8;
+    color: white;
+    font-size: 1.5em;
+    border: 3px solid rgb(20, 107, 103);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.432);
+    min-height: 15vh;
+    max-height: fit-content;
+    max-width: 75vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.submit {
+    min-width: fit-content;
+    max-width: 100px;
+
+}
+
+img {
+
+    max-width: 30vw;
+    max-height: 30vw;
+
+}
+
+#title {
+    font-size: 1rem;
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#lingulo-accordion {
+    margin: 3vw;
+    max-width: 90%;
+}
+
+
+
+
+
+
+
+
+#lingulo-accordion > div
+{
+    background-color: rgb(213, 212, 212);
+	width: 80vw;
+	height: 35px;
+	overflow: hidden;
+	cursor: pointer;
+    margin-top:15px;
+    border: 10px #0079c8;
+    padding-left: 2%;
+    padding-bottom:3%;
+    padding-right: 3%;
+}
+
+#lingulo-accordion > div h3
+{
+	color: #fff;
+	padding: 4px 2px 4px 10px;
+	margin: 0 0 20px 0;
+	font-size: 8vw;
+	background-color: #144efc;
+    min-height: fit-content;
+}
+
+#lingulo-accordion > div h3:hover
+{
+	background-color: #050099;
+    min-width: fit-content;
+}
+
+.img{
+
+    min-width: 95%;
+}
+
+
+.input{
+
+    max-width: 20%;
+}
+
+.form-holder{
+    background-color: #aaddff;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    border: 3px solid rgb(20, 107, 103);
+    border-radius: 8px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.432);
+
+    max-width: 80%;
+
+    padding: 2%;
+    
+}
+
+#result-cashback{
+    max-width: 5vh;
+    min-height: 5vh;
+    background-color: #c27e00;
+    border-radius: 25%;
+    margin: 4px !important;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content:center; 
+    padding:3%;
+
+}
+
+.input{
+    max-width: 9vw;	
+}

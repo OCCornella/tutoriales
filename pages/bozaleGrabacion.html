@@ -1,0 +1,260 @@
+<html>
+
+<head>
+    <title>
+        OC Cornellà
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <section class="layout">
+        <div class="header">
+            <img src="../img/logo.jpg">
+            <div id="title">
+                <p>Procedimientos</p>
+                <hr>
+                <p>OC Cornellà</p>
+                <a href="menu.html">
+                    <p>volver</p>
+                </a>
+            </div>
+
+        </div>
+
+        <section class="grid-container">
+
+
+
+
+
+
+            <div id="lingulo-accordion">
+                <div>
+                    <h3>1: grabación</h3>
+                    <p>Pólizas --\>NUEVA Alta Póliza</p>
+                    <img class="img" src="../img/bozale_pics/1.jpg">
+                </div>
+                <div>
+                    <h3>2: póliza colectiva</h3>
+                    <p>Tipo póliza --\> COLECTIVA </p>
+                    <p>
+                        Se desbloqueará para añadir el número de póliza</p>
+                    <img class="img" src="../img/bozale_pics/2.jpg">
+                    <p>Número de póliza:
+                    <h4>84366243</h4>
+                    </p>
+                </div>
+                <div>
+                    <h3>3: Tomador</h3>
+                    <p>Tomador: Alex Bosacoma Sesma
+                    </p>
+                    <p>DNI:
+                    <h4>37388946P</h4>
+                    </p>
+                    <img class="img" src="../img/bozale_pics/3.jpg">
+                    <p>Importante no añadir a Alex como beneficiario, solo
+                        es tomador.</p>
+
+                </div>
+
+                <div>
+                    <h3>4: Paga empresa</h3>
+                    <p>En datos de pago ---\> Paga Empresa
+                    </p>
+                    <img class="img" src="../img/bozale_pics/4.jpg">
+
+                </div>
+
+
+                <div>
+                    <h3>5: Baja + cashback</h3>
+                    <p>1. Tramitar baja con motivo: definición comercial con el efecto que haya solicitado Maria Clapés
+                    </p>
+                    <p>2. Se apuntará la póliza para hacer un cashback de medio mes en los siguientes casos:
+                    <ul>
+                        <li>
+                            La cobertura ha sido solicitada para empezar después del día 15 (ej: desde 16 de junio).
+
+                        </li>
+
+                        <li>
+                            La cobertura ha sido solicitada para acabar antes del día 16 (ej: hasta 8 de agosto).
+
+                        </li>
+                    </ul>
+
+                    <h4>Link al excel</h4>
+                    <a href="https://docs.google.com/spreadsheets/d/126zmoZbly7P5ZFlrOhi7m7lYD5qUygHE/edit#gid=1067012668"
+                        target="_blank">Excel Cashbacks Bozale</a>
+
+                    <p>**IMPORTANTE: Solo un cashback por póliza </p>
+                    *Los cashbacks no son acumulables, solo se puede compensar medio mes por póliza incluso si se
+                    dieran ambas condiciones.
+                    </p>
+
+                </div>
+
+
+                <div>
+                    <h3>Paso 6: Certificado</h3>
+                    <p>Descargar el documento formato y modificar los datos en negrita
+                    </p>
+		    <hr>
+		    Link al formato:<a href="../docs/formato_bozale.docx" target="blank"><img src="../img/icono-word.png"></a>
+                    <ul>
+                        <li>REF: numero de colectivo en cabecera</li>
+                        <li>numero de colectivo en cuerpo</li>
+                        <li>nombre y apellidos</li>
+                        <li>pasaporte</li>
+                        <li>fecha de firma</li>
+
+                    </ul>
+                    <h4>Formato certificado</h4>
+                    <img class="img" src="../img/bozale_pics/4.jpg">
+
+
+                    <p> Una vez editado guardar como PDF y hacer llegar a María Clapés a </p>
+                    <p>mclapes@bozale.com</p>
+                </div>
+
+                <div>
+                    <h3>Calcular si cashback</h3>
+
+                    <div class="form-holder">
+                        <hr> DIA INICIO:
+                        <input class="input" type="text" id="fecha-inicio" placeholder="DD">
+                        <input class="input" type="text" placeholder="MM">
+                        <hr>DIA FIN :
+                        <input class="input" type="text" id="fecha-fin" placeholder="DD">
+			<input class="input" type="text" placeholder="MM">
+                        <hr>
+                        <button id="corresponde">Corresponde?</button>
+                        <div id="result-cashback"></div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Pdf solicitud sellada</h3>
+                    Descargar Formato sellado y firmado
+                    <hr>
+                    <center><a href="../docs/alta_bozale.pdf" target="_blank"><img src="../img/icono-pdf.png"></a></center>
+                    
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <div class="footer"></div>
+    </section>
+
+
+
+    <script>
+        window.onload = function () {
+            let width = window.screen.width;
+            let height = window.screen.height;
+            let Xpos = window.screenX;
+            let Ypos = window.screenY;
+
+            window.moveTo(0, 0);
+            if (width > 500) {
+                width = window.screen.width / 5;
+            }
+
+            window.addEventListener("resize", () => {
+                window.resizeTo(width, height,);
+                window.moveTo(0, 0);
+            });
+
+
+
+
+
+            // Function to check if window position has changed
+            function checkWindowPosition() {
+                // Compare current position with initial position
+                if (window.screenX !== Xpos || window.screenY !== Ypos) {
+                    window.moveTo(0, 0);
+                    Xpos = window.screenX;
+                    Ypos = window.screenY;
+                }
+            }
+
+            setInterval(checkWindowPosition, 1000);
+
+
+            var accItem = document.getElementsByClassName('accordionItem');
+            var accHD = document.getElementsByClassName('accordionItemHeading');
+            for (i = 0; i < accHD.length; i++) {
+                accHD[i].addEventListener('click', toggleItem, false);
+            }
+            function toggleItem() {
+                var itemClass = this.parentNode.className;
+                for (i = 0; i < accItem.length; i++) {
+                    accItem[i].className = 'accordionItem close';
+                }
+                if (itemClass == 'accordionItem close') {
+                    this.parentNode.className = 'accordionItem open';
+                }
+            }
+
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

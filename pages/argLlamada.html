@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <title>
+        OC Cornellà
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <section class="layout">
+        <div class="header">
+            <img src="../img/logo.jpg">
+            <div id="title">
+                <p>Procedimientos</p>
+                <hr>
+                <p>OC Cornellà</p>
+                <a href="menu.html">
+                    <p>volver</p>
+                </a>
+            </div>
+
+        </div>
+
+        <section class="grid-container">
+
+
+
+
+
+
+            <div id="lingulo-accordion">
+                <div>
+                    <h3>Llamada 1</h3>
+                    <p>Ofreceremos al cliente la posibilidad de acogerse a una promoción en la que, contratando el complemento asistencia familiar Iplus por 12 meses, podremos beneficiarnos de un muy buen descuento.</p>
+                        <p>En caso de que la persona sea reticente, le diremos de hacerle números y le enviaremos un correo al respecto desglosando:</p>
+                        <li> Prima actual (prima con actualización de primas sin descuentos).
+                        <li>Prima con descuento (prima del complemento + prima con %dto).</li>
+                        <p>Indicarle también que una vez acabados los 12 meses, la prima renovará a raíz de la prima con el descuento incluido en lugar de a raíz de la prima actual, ya que el descuento no lo perderá.</p>
+                        
+                </div>
+                <div>
+                    <h3>Descripción complemento Asis.Fam.Iplus </h3>
+                    <h4>ASISTENCIA EN VIAJE</h4>
+                    Aseguramos a todos los integrantes/asegurados de la póliza con un complemento de asistencia en viaje, alguna de las principales coberturas:
+                    <ul>
+                        <li>Anulación de viaje (máx. 600€).</li>
+                        <li>Reembolso de gastos por demora en la entrega de equipajes (+ 24H, 300€ persona, 1.200€ siniestro).</li>
+                        <li>Demora o cancelación del viaje o perdida de conexiones.</li>
+                        <li>Gastos médicos urgencia en el extranjero (15.000€ y 500€ dentales asegurado y siniestro).</li>
+                        <li>Traslados, prolongaciones de estancia, regresos anticipados de asegurados etc.</li>
+                        <li>Repatriación.</li>
+                        <li><h5>Deceso nacional e internacional (Santalucia).</h5>  </li>
+                    </ul>
+
+                    <h4>Requisitos:</h4>
+                    <ul>
+                        <li>No disponer de seguro de decesos con Santalucia (ya que se trata de una cobertura incluida en el complemento y causaría duplicidad).</li>
+                        <li>Tener DNI o NIE.</li>
+                        <li>Tener cuenta bancaria española.</li>    
+                    </ul>
+                </div>
+
+  
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <div class="footer"></div>
+    </section>
+
+
+
+    <script>
+        window.onload = function () {
+            let width = window.screen.width;
+            let height = window.screen.height;
+            let Xpos = window.screenX;
+            let Ypos = window.screenY;
+
+            window.moveTo(0, 0);
+            if (width > 500) {
+                width = window.screen.width / 5;
+            }
+
+            window.addEventListener("resize", () => {
+                window.resizeTo(width, height,);
+                window.moveTo(0, 0);
+            });
+
+
+
+
+
+            // Function to check if window position has changed
+            function checkWindowPosition() {
+                // Compare current position with initial position
+                if (window.screenX !== Xpos || window.screenY !== Ypos) {
+                    window.moveTo(0, 0);
+                    Xpos = window.screenX;
+                    Ypos = window.screenY;
+                }
+            }
+
+            setInterval(checkWindowPosition, 1000);
+
+
+            var accItem = document.getElementsByClassName('accordionItem');
+            var accHD = document.getElementsByClassName('accordionItemHeading');
+            for (i = 0; i < accHD.length; i++) {
+                accHD[i].addEventListener('click', toggleItem, false);
+            }
+            function toggleItem() {
+                var itemClass = this.parentNode.className;
+                for (i = 0; i < accItem.length; i++) {
+                    accItem[i].className = 'accordionItem close';
+                }
+                if (itemClass == 'accordionItem close') {
+                    this.parentNode.className = 'accordionItem open';
+                }
+            }
+
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

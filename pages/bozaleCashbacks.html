@@ -1,0 +1,177 @@
+<html>
+
+<head>
+    <title>
+        OC Cornellà
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <section class="layout">
+        <div class="header">
+            <img src="../img/logo.jpg">
+            <div id="title">
+                <p>Procedimientos</p>
+                <hr>
+                <p>OC Cornellà</p>
+                <a href="menu.html">
+                    <p>volver</p>
+                </a>
+            </div>
+
+        </div>
+
+        <section class="grid-container">
+
+
+            <div id="lingulo-accordion">
+                <div>
+                    <h3>1: Solicitar factura </h3>
+                    <p>Si María Clapés no ha enviado la factura, se la solicitaremos a través de su email.</p>
+                    <p>mclapes@bozale.com</p>
+                </div>
+                <div>
+                    <h3>2. calcular cashback</h3>
+<p>Con la factura iremos al final de esta, y dividiremos la cantidad a cobrar por el precio de la prima real, el resultado lo redondearemos hacia abajo(este será el número de asegurados cobrados).</p>
+<p>La cantidad de asegurados calculada la multiplicaremos por la diferencia entre la prima real y la prima acordada, la cifra resultante corresponde al cashback a realizar por diferencia de prima real vs prima acordada.</p>
+<p>**Fecha de cashback: El cashback se realizará alrededor del día 22 del mes siguiente al cobro. Ejemplo: de la factura de febrero calcularíamos el cashback a realizar el 22 de marzo.</p>
+<p>El número de cuenta se encuentra en la cabecera de la póliza colectiva</p>  
+              
+
+</div>
+                <div>
+
+
+                    <h3>Link excel medios meses</h3>
+                    click para ir al excel<hr>
+                    <a href="https://docs.google.com/spreadsheets/d/126zmoZbly7P5ZFlrOhi7m7lYD5qUygHE/edit#gid=1067012668"
+                        target="_blank">
+                        <center><img src="../img/icono-excel.png"></center></a>
+
+                    
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <div class="footer"></div>
+    </section>
+
+
+
+    <script>
+        window.onload = function () {
+            let width = window.screen.width;
+            let height = window.screen.height;
+            let Xpos = window.screenX;
+            let Ypos = window.screenY;
+
+            window.moveTo(0, 0);
+            if (width > 500) {
+                width = window.screen.width / 5;
+            }
+
+            window.addEventListener("resize", () => {
+                window.resizeTo(width, height,);
+                window.moveTo(0, 0);
+            });
+
+
+
+
+
+            // Function to check if window position has changed
+            function checkWindowPosition() {
+                // Compare current position with initial position
+                if (window.screenX !== Xpos || window.screenY !== Ypos) {
+                    window.moveTo(0, 0);
+                    Xpos = window.screenX;
+                    Ypos = window.screenY;
+                }
+            }
+
+            setInterval(checkWindowPosition, 1000);
+
+
+            var accItem = document.getElementsByClassName('accordionItem');
+            var accHD = document.getElementsByClassName('accordionItemHeading');
+            for (i = 0; i < accHD.length; i++) {
+                accHD[i].addEventListener('click', toggleItem, false);
+            }
+            function toggleItem() {
+                var itemClass = this.parentNode.className;
+                for (i = 0; i < accItem.length; i++) {
+                    accItem[i].className = 'accordionItem close';
+                }
+                if (itemClass == 'accordionItem close') {
+                    this.parentNode.className = 'accordionItem open';
+                }
+            }
+
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

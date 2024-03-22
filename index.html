@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <title>
+        OC Cornellà
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+
+</head>
+
+<body>
+    <section class="layout">
+        <div class="header">
+            <img src="./img/logo.jpg">
+            <div>
+                Procedimientos
+                <hr>OC Cornellà
+            </div>
+
+        </div>
+
+        <div class="main">
+            <button class="centered-button" onclick="popUp()">Si no carga menú click aquí</button>
+        </div>
+        <div class="footer"></div>
+    </section>
+
+
+
+
+    <script>
+        window.onload = popUp();
+
+        function popUp() {
+
+            let width = window.screen.width;
+            let height = window.screen.height;
+            if (width > 500) {
+                width = window.screen.width / 5;
+            }
+
+            window.open("./pages/menu.html",
+                "", `width=${width}, height=${height}`);
+
+            window.open('', '_self', ''); window.close();
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <title>
+        OC Cornellà
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/script.js"></script>
+</head>
+
+<body>
+    <section class="layout">
+        <div class="header">
+            <img src="../img/logo.jpg">
+            <div id="title">
+                <p>Procedimientos</p>
+                <hr>
+                <p>OC Cornellà</p>
+            </div>
+
+        </div>
+        <section class="grid-container">
+            <article class="card">Bozale Business
+
+                <button class="submit" type="submit"><a href="./bozaleGrabacion.html">Grabación</a></button>
+                <button class="submit" type="submit"><a href="./BozaleCashbacks.html">Cashbacks</a></button>
+            </article>
+            <article class="card">Corporate Pymes
+                <button class="submit" type="submit">Editar con Photoshop</button>
+                <button class="submit" type="submit">convertir pdf y mezclar</button>
+            </article>
+            <article class="card">World Wide Internships
+                <button class="submit" type="submit"><a href="./wwiConsulado.html">Fase 1 - Carta Consulado</a></button>
+                <button class="submit" type="submit"><a href="./wwiAltaPago.html">Fase 2 - Alta + Excel Pago</a></button>
+            </article>
+            <article class="card">Promos Sta.Lucia
+                <button class="submit" type="submit"><a href="./argLlamada.html">Argumentario de llamada</a></button>
+                <button class="submit" type="submit"><a href="./gestDoc.html">Gestión y documentación</a></button>
+            </article>
+            <article class="card">Contratos de colaboración
+                <button class="submit" type="submit"><a href="./solInfoColaboracion.html">Procedimiento</a></button>
+            </article>
+            <article class="card">Excel CRM      
+                <a href="https://docs.google.com/spreadsheets/d/126zmoZbly7P5ZFlrOhi7m7lYD5qUygHE/edit?pli=1#gid=1574536703"
+                    target="_blank">
+                    <button class="submit" type="submit"> <center><img src="../img/icono-excel.png"></center></a></button>
+            </article>
+
+        </section>
+        <div class="footer"></div>
+    </section>
+
+
+
+    <script>
+        window.onload = function () {
+            let width = window.screen.width;
+            let height = window.screen.height;
+            let Xpos = window.screenX;
+            let Ypos = window.screenY;
+
+            window.moveTo(0, 0);
+            if (width > 500) {
+                width = window.screen.width / 5;
+            }
+
+            window.addEventListener("resize", () => {
+                window.resizeTo(width, height,);
+                window.moveTo(0, 0);
+            });
+
+
+
+
+
+            // Function to check if window position has changed
+            function checkWindowPosition() {
+                
+                
+                window.resizeTo(width, height,);
+
+                // Compare current position with initial position
+                if (window.screenX !== Xpos || window.screenY !== Ypos) {
+                    window.moveTo(0, 0);
+                    Xpos = window.screenX;
+                    Ypos = window.screenY;
+                }
+            }
+
+            setInterval(checkWindowPosition, 1000);s
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

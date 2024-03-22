@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <title>
+        OC Cornellà
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <section class="layout">
+        <div class="header">
+            <img src="../img/logo.jpg">
+            <div id="title">
+                <p>Procedimientos</p>
+                <hr>
+                <p>OC Cornellà</p>
+                <a href="menu.html">
+                    <p>volver</p>
+                </a>
+            </div>
+
+        </div>
+
+        <section class="grid-container">
+
+
+
+
+
+
+            <div id="lingulo-accordion">
+
+                <div>
+                    <h3>Solicitar info</h3>
+                    Solicitar al futuro colaborador la siguiente información:
+<hr>
+                    Castellano
+
+                    <ul>
+                        <li>Nombre del responsable de la empresa:</li>
+                        <li>DNI/ID/pasaporte del responsable:</li>
+                        <li>Nombre completo empresa:</li>
+                        <li>Dirección fiscal:</li>
+                        <li>Teléfono:</li>
+                        <li>Email:</li>
+                        <li>CIF:</li>
+                        <li>IBAN:</li>
+                        <li>BIC/SWIFT:</li>
+                        <li>Email facturación:</li>
+                    </ul>
+                    <hr>
+                    Inglés
+                    <ul>
+                        <li>Company manager name:</li>
+                        <li>Company manager id or Passport</li>
+                        <li>Company full name:</li>
+                        <li>Legal address:</li>
+                        <li>Phone number:</li>
+                        <li>Email:</li>
+                        <li>Company registry id:</li>
+                        <li>IBAN:</li>
+                        <li>BIC/SWIFT:</li>
+                        <li>Billilng email:</li>
+
+                    </ul>
+
+
+                </div>
+
+                <div>
+                    <h3>Recibida la info</h3>
+
+                    Completar el formato de contrato de colaboración con los datos de la empresa,
+                    Comentar con Cristina que comisiones le daremos y modificar el cuadro.
+                    En la página 2 está el protocolo a seguir a la hora de contratar, esto puede ser modificado en
+                    función de la negociación, por defecto sería el siguiente:
+                    1. El Auxiliar proporcionará la documentación completa del cliente.
+                    2. El Mediador proporcionara una factura de pago al auxiliar.
+                    3. El Cliente o el auxiliar proporcionará el recibo de pago o número de tarjeta y fecha de caducidad
+                    para poder hacer efectivo el cobro de la póliza.
+                    4. El mediador proporcionará al cliente y al auxiliar el certificado de cobertura.
+
+                    <p>Link al formato en word: <a href="../docs/formato-contrato-colaboracion.docx"><img
+                                src="../img/icono-word.png"></a>
+
+                    </p>
+                </div>
+
+                <div>
+
+                    <h3>Firmas </h3>
+                    Una vez completo el formato, guardar como pdf y hacer llegar al cliente para su firma y sellado.
+                    Una vez nos lo devuelva lo firmaremos y sellaremos, reenviaremos al cliente y guardaremos en el
+                    archivador correspondiente.
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <div class="footer"></div>
+    </section>
+
+
+
+    <script>
+        window.onload = function () {
+            let width = window.screen.width;
+            let height = window.screen.height;
+            let Xpos = window.screenX;
+            let Ypos = window.screenY;
+
+            window.moveTo(0, 0);
+            if (width > 500) {
+                width = window.screen.width / 5;
+            }
+
+            window.addEventListener("resize", () => {
+                window.resizeTo(width, height,);
+                window.moveTo(0, 0);
+            });
+
+
+
+
+
+            // Function to check if window position has changed
+            function checkWindowPosition() {
+                // Compare current position with initial position
+                if (window.screenX !== Xpos || window.screenY !== Ypos) {
+                    window.moveTo(0, 0);
+                    Xpos = window.screenX;
+                    Ypos = window.screenY;
+                }
+            }
+
+            setInterval(checkWindowPosition, 1000);
+
+
+            var accItem = document.getElementsByClassName('accordionItem');
+            var accHD = document.getElementsByClassName('accordionItemHeading');
+            for (i = 0; i < accHD.length; i++) {
+                accHD[i].addEventListener('click', toggleItem, false);
+            }
+            function toggleItem() {
+                var itemClass = this.parentNode.className;
+                for (i = 0; i < accItem.length; i++) {
+                    accItem[i].className = 'accordionItem close';
+                }
+                if (itemClass == 'accordionItem close') {
+                    this.parentNode.className = 'accordionItem open';
+                }
+            }
+
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

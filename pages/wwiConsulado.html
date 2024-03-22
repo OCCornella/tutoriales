@@ -1,0 +1,183 @@
+<html>
+
+<head>
+    <title>
+        OC Cornellà
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <section class="layout">
+        <div class="header">
+            <img src="../img/logo.jpg">
+            <div id="title">
+                <p>Procedimientos</p>
+                <hr>
+                <p>OC Cornellà</p>
+                <a href="menu.html">
+                    <p>volver</p>
+                </a>
+            </div>
+
+        </div>
+
+        <section class="grid-container">
+
+
+
+
+
+
+            <div id="lingulo-accordion">
+
+                <div>
+                    <h3>Acceso a podio</h3>
+                    accederemos a la siguiente url:
+
+                    <a href="www.podio.com">www.podio.com</a>
+
+                    <p>tras ingresar las credenciales podremos acceder a la información del nuevo asegurado</p>
+
+                    <p>las credenciales las podéis solicitar a Cristina</p>
+
+                </div>
+
+                <div>
+                    <h3>Grabación</h3>
+                    <p>Grabaremos la póliza en estado pendiente con la información que aparece en podio.</p> 
+		    <p>se trata de una póliza student de duración determinada (5 a 7 meses normalmente)</p>
+                    <p>Importante indicar fecha baja durante la grabación.</p>
+                </div>
+
+
+                <div>
+                    <h3>Carta Consulado</h3>
+                    Una vez tengamos el número de póliza generado procederemos a enviarles la carta conulado
+                    cumplimentada con los datos de la póliza.
+
+                    <p>Link al formato en word: <a href="../docs/formato-consulado.doc"><img
+                                src="../img/icono-word.png"></a>
+
+                    </p>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+        <div class="footer"></div>
+    </section>
+
+
+
+    <script>
+        window.onload = function () {
+            let width = window.screen.width;
+            let height = window.screen.height;
+            let Xpos = window.screenX;
+            let Ypos = window.screenY;
+
+            window.moveTo(0, 0);
+            if (width > 500) {
+                width = window.screen.width / 5;
+            }
+
+            window.addEventListener("resize", () => {
+                window.resizeTo(width, height,);
+                window.moveTo(0, 0);
+            });
+
+
+
+
+
+            // Function to check if window position has changed
+            function checkWindowPosition() {
+                // Compare current position with initial position
+                if (window.screenX !== Xpos || window.screenY !== Ypos) {
+                    window.moveTo(0, 0);
+                    Xpos = window.screenX;
+                    Ypos = window.screenY;
+                }
+            }
+
+            setInterval(checkWindowPosition, 1000);
+
+
+            var accItem = document.getElementsByClassName('accordionItem');
+            var accHD = document.getElementsByClassName('accordionItemHeading');
+            for (i = 0; i < accHD.length; i++) {
+                accHD[i].addEventListener('click', toggleItem, false);
+            }
+            function toggleItem() {
+                var itemClass = this.parentNode.className;
+                for (i = 0; i < accItem.length; i++) {
+                    accItem[i].className = 'accordionItem close';
+                }
+                if (itemClass == 'accordionItem close') {
+                    this.parentNode.className = 'accordionItem open';
+                }
+            }
+
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

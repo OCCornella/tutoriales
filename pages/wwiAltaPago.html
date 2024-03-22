@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>
+        OC Cornellà
+    </title>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <section class="layout">
+        <div class="header">
+            <img src="../img/logo.jpg">
+            <div id="title">
+                <p>Procedimientos</p>
+                <hr>
+                <p>OC Cornellà</p>
+                <a href="menu.html">
+                    <p>volver</p>
+                </a>
+            </div>
+
+        </div>
+
+        <section class="grid-container">
+
+
+            <div id="lingulo-accordion">
+
+                <div>
+                    <h3>Alta y Excel</h3>
+   
+                    Una vez Claudia o Michelle nos comuniquen que uno de ellos ha llegado, la pasaremos a alta (indexaremos pasaporte y convenio, están en podio), y apuntaremos número de póliza y nombre y apellidos en un excel nuevo cada mes.
+                    Le proporcionaremos posteriormente el justificante de contrato con el número de tarjeta, para que lo pueda usar hasta que llegue la tarjeta.
+                </div>
+                
+                <div>
+                    <h3>Pago</h3>
+   
+                    Sobre el 25 de cada mes, World Wide realizará una transferencia a Sanitas con la cantitdad total en relación de asegurados que han llegado, para esto le haremos llegar el excel confeccionado en el anterior punto.
+                </div>
+
+                
+                <div>
+                    <h3>Asisgnación de pago</h3>
+   
+                    Una vez realizado el pago, nos harán llegar un justificante.Enviaremos este justificante y el excel a facturación. 
+                    Normalmente nuestro contacto es Maria del Mar Sanchez de Dios (puede buscarse en outlook o teams con dicho nombre)
+                </div>
+            </div>
+
+
+        </section>
+        <div class="footer"></div>
+    </section>
+
+
+
+    <script>
+        window.onload = function () {
+            let width = window.screen.width;
+            let height = window.screen.height;
+            let Xpos = window.screenX;
+            let Ypos = window.screenY;
+
+            window.moveTo(0, 0);
+            if (width > 500) {
+                width = window.screen.width / 5;
+            }
+
+            window.addEventListener("resize", () => {
+                window.resizeTo(width, height,);
+                window.moveTo(0, 0);
+            });
+
+
+
+
+
+            // Function to check if window position has changed
+            function checkWindowPosition() {
+                // Compare current position with initial position
+                if (window.screenX !== Xpos || window.screenY !== Ypos) {
+                    window.moveTo(0, 0);
+                    Xpos = window.screenX;
+                    Ypos = window.screenY;
+                }
+            }
+
+            setInterval(checkWindowPosition, 1000);
+
+
+            var accItem = document.getElementsByClassName('accordionItem');
+            var accHD = document.getElementsByClassName('accordionItemHeading');
+            for (i = 0; i < accHD.length; i++) {
+                accHD[i].addEventListener('click', toggleItem, false);
+            }
+            function toggleItem() {
+                var itemClass = this.parentNode.className;
+                for (i = 0; i < accItem.length; i++) {
+                    accItem[i].className = 'accordionItem close';
+                }
+                if (itemClass == 'accordionItem close') {
+                    this.parentNode.className = 'accordionItem open';
+                }
+            }
+
+
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>
